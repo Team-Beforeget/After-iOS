@@ -16,5 +16,5 @@ jobs:
     - name: Run tests
       run: |
         pod install --repo-update --clean-install --project-directory=After-iOS/
-        xcodebuild test -workspace After-iOS/After-iOS.xcodeproj -scheme After-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.0'
+        xcodebuild test -workspace './After-iOS/After-iOS.xcworkspace' -scheme 'After-iOSTests' -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.0'
       
