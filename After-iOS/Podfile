@@ -6,6 +6,10 @@ target 'After-iOS' do
   use_frameworks!
 
   # Pods for After-iOS
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'Then'
+  pod 'Kingfisher', '~> 6.0'
+  pod 'SwiftGen', '~> 6.0'
 
   target 'After-iOSTests' do
     inherit! :search_paths
