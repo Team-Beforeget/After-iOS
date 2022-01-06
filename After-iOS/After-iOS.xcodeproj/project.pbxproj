@@ -14,6 +14,12 @@
 		5B139C1B2784C5D8007AC0F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B139C192784C5D8007AC0F9 /* Main.storyboard */; };
 		5B139C1D2784C5DD007AC0F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B139C1C2784C5DD007AC0F9 /* Assets.xcassets */; };
 		5B139C202784C5DD007AC0F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B139C1E2784C5DD007AC0F9 /* LaunchScreen.storyboard */; };
+		5B304B5C278613620054314A /* MockParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B304B5B278613620054314A /* MockParser.swift */; };
+		5B304B61278614190054314A /* BaseResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B304B60278614190054314A /* BaseResponseType.swift */; };
+		5B304B64278617780054314A /* post.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B304B63278617770054314A /* post.json */; };
+		5B304B6B2786DE4F0054314A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 5B304B6A2786DE4F0054314A /* Then */; };
+		5B304B6D2786E3FA0054314A /* FilterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B304B6C2786E3FA0054314A /* FilterModalViewController.swift */; };
+		5B304B6F2787630D0054314A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B304B6E2787630C0054314A /* PostModel.swift */; };
 		5B9D05E62784E0A500F95D31 /* After_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9D05E52784E0A500F95D31 /* After_iOSTests.swift */; };
 		BBCC15B39C3700458CF05779 /* Pods_After_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060338F0DB20F186039A4BD5 /* Pods_After_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +45,11 @@
 		5B139C1C2784C5DD007AC0F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B139C1F2784C5DD007AC0F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B139C212784C5DD007AC0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B304B5B278613620054314A /* MockParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockParser.swift; sourceTree = "<group>"; };
+		5B304B60278614190054314A /* BaseResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseType.swift; sourceTree = "<group>"; };
+		5B304B63278617770054314A /* post.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = post.json; sourceTree = "<group>"; };
+		5B304B6C2786E3FA0054314A /* FilterModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModalViewController.swift; sourceTree = "<group>"; };
+		5B304B6E2787630C0054314A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		5B9D05E32784E0A500F95D31 /* After-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "After-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9D05E52784E0A500F95D31 /* After_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = After_iOSTests.swift; sourceTree = "<group>"; };
 		7C82EE5D174669EBB320D736 /* Pods-After-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-After-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-After-iOSTests/Pods-After-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -53,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0221CB16ABD00BF6E99485A1 /* Pods_After_iOS.framework in Frameworks */,
+				5B304B6B2786DE4F0054314A /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,15 +122,60 @@
 		5B139C122784C5D8007AC0F9 /* After-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5B139C132784C5D8007AC0F9 /* AppDelegate.swift */,
-				5B139C152784C5D8007AC0F9 /* SceneDelegate.swift */,
-				5B139C172784C5D8007AC0F9 /* ViewController.swift */,
-				5B139C192784C5D8007AC0F9 /* Main.storyboard */,
-				5B139C1C2784C5DD007AC0F9 /* Assets.xcassets */,
-				5B139C1E2784C5DD007AC0F9 /* LaunchScreen.storyboard */,
+				5B304B592786131B0054314A /* Network */,
+				5B304B5A2786134F0054314A /* Mock */,
+				5B304B5E278613790054314A /* Source */,
+				5B304B5D2786136F0054314A /* Resource */,
 				5B139C212784C5DD007AC0F9 /* Info.plist */,
 			);
 			path = "After-iOS";
+			sourceTree = "<group>";
+		};
+		5B304B592786131B0054314A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5B304B5F2786140B0054314A /* DataModel */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5B304B5A2786134F0054314A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				5B304B5B278613620054314A /* MockParser.swift */,
+				5B304B63278617770054314A /* post.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		5B304B5D2786136F0054314A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5B139C1C2784C5DD007AC0F9 /* Assets.xcassets */,
+				5B139C1E2784C5DD007AC0F9 /* LaunchScreen.storyboard */,
+				5B139C192784C5D8007AC0F9 /* Main.storyboard */,
+				5B139C132784C5D8007AC0F9 /* AppDelegate.swift */,
+				5B139C152784C5D8007AC0F9 /* SceneDelegate.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5B304B5E278613790054314A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5B139C172784C5D8007AC0F9 /* ViewController.swift */,
+				5B304B6C2786E3FA0054314A /* FilterModalViewController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		5B304B5F2786140B0054314A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B304B60278614190054314A /* BaseResponseType.swift */,
+				5B304B6E2787630C0054314A /* PostModel.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		5B9D05E42784E0A500F95D31 /* After-iOSTests */ = {
@@ -147,6 +204,9 @@
 			dependencies = (
 			);
 			name = "After-iOS";
+			packageProductDependencies = (
+				5B304B6A2786DE4F0054314A /* Then */,
+			);
 			productName = "After-iOS";
 			productReference = 5B139C102784C5D8007AC0F9 /* After-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +258,10 @@
 				Base,
 			);
 			mainGroup = 5B139C072784C5D8007AC0F9;
+			packageReferences = (
+				5B304B672786DD540054314A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				5B304B692786DE4F0054314A /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 5B139C112784C5D8007AC0F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -214,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B139C202784C5DD007AC0F9 /* LaunchScreen.storyboard in Resources */,
+				5B304B64278617780054314A /* post.json in Resources */,
 				5B139C1D2784C5DD007AC0F9 /* Assets.xcassets in Resources */,
 				5B139C1B2784C5D8007AC0F9 /* Main.storyboard in Resources */,
 			);
@@ -299,6 +364,10 @@
 			files = (
 				5B139C182784C5D8007AC0F9 /* ViewController.swift in Sources */,
 				5B139C142784C5D8007AC0F9 /* AppDelegate.swift in Sources */,
+				5B304B6D2786E3FA0054314A /* FilterModalViewController.swift in Sources */,
+				5B304B61278614190054314A /* BaseResponseType.swift in Sources */,
+				5B304B5C278613620054314A /* MockParser.swift in Sources */,
+				5B304B6F2787630D0054314A /* PostModel.swift in Sources */,
 				5B139C162784C5D8007AC0F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,6 +665,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B304B672786DD540054314A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		5B304B692786DE4F0054314A /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B304B6A2786DE4F0054314A /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B304B692786DE4F0054314A /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B139C082784C5D8007AC0F9 /* Project object */;
 }

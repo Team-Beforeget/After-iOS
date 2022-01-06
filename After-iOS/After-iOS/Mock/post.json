@@ -1,0 +1,24 @@
+{
+    "status": 200,
+    "success": true,
+    "message": "글 조회 성공",
+    "data": {
+        "post": [
+        {
+            "id":0,
+            "title":"해리포터",
+            "category":0,
+            "date":"2021-02-02",
+            "star":4,
+            "oneline": ["노잼","흥미진진해요"]
+        },{
+            "id":1,
+            "title":"달러구트",
+            "category":1,
+            "date":"2021-02-04",
+            "star":2,
+            "oneline": ["존잼"]
+        }
+        ]
+    }
+}
